@@ -11,5 +11,5 @@ fi
 CacheDir=$SCRIPT_DIR/cacheDir
 RmapDir=$SCRIPT_DIR/rmapDir
 mkdir -p $CacheDir $RmapDir
-$LMOD_DIR/spiderCacheSupport --cacheDirs $CACHEDIR --updateFn $SCRIPT_DIR/system.txt
+$LMOD_DIR/spiderCacheSupport --cacheDirs $CacheDir --updateFn $SCRIPT_DIR/system.txt > $SCRIPT_DIR/lmodrc.lua
 $LMOD_DIR/update_lmod_system_cache_files -t $SCRIPT_DIR/system.txt -d $CacheDir -R $RmapDir -J -K $SCRIPT_DIR/modulefiles
